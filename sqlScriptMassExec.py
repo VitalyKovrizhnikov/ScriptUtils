@@ -3,7 +3,7 @@ import sys
 import fnmatch
 from subprocess import call
 
-COMMAND = "..\serv facb01_2014 rko3 dca 123456"
+COMMAND = "..\serv"
 
 def getListForLoad():
 	listForLoad = []
@@ -19,6 +19,14 @@ if __name__ == "__main__":
 	for script in scriptList:
 		loadBat.write('call %1 '+script+' %2 %3 %4 %5\n')
 	loadBat.close()
+	if sys.argv[1]:
+		COMMAND += ' ' + sys.argv[1]
+	if sys.argv[2]:
+		COMMAND += ' ' + sys.argv[2]
+	if sys.argv[3]:
+		COMMAND += ' ' + sys.argv[3]
+	if sys.argv[4]:
+		COMMAND += ' ' + sys.argv[4]
 	call("load.bat "+COMMAND)
 
 	
