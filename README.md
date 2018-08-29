@@ -1,2 +1,2 @@
 # ScriptUtils
-Useful helpers for my everyday work
+Some scripts, completely useless for anyone except me
