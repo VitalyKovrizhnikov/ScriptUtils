@@ -70,7 +70,7 @@ def parseNGen(xfile):
     print('Разбор ' + xfile)
     tree = etree.parse(xfile)
     root = tree.getroot()
-    for number in CTRL_CODE_PACK_NEW: #range(TOTAL):
+    for number in range(TOTAL): #CTRL_CODE_PACK_NEW: #
     	ef = open(FOLDER_NAME + FILE_NAME + str(number) + '.xml', 'wb')
     	print(root.tag.replace('{urn:cbr-ru:ed:v2.0}', ''))
     	walkTrough(root, number)
